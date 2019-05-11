@@ -24,7 +24,7 @@ import xadmin
 from django.views.generic import TemplateView
 # from users.views import user_login
 # from mooc.settings import MEDIA_ROOT
-# from schools.views import OrgView
+# from schools.views import SchoolView
 # from users.views import LoginView, RegisterView, ActiveUserView, ForgetPwdView, ResetView, ModifyPwdView, LogoutView, \
 #     IndexView
 

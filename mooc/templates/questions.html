@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>咨询问题</title>
+		<!-- <link rel="icon" href="aa.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="aa.ico">
+		<link rel="Bookmark" href="aa.ico"> -->
+		
+		<link rel="SHORTCUT ICON" href="study2.ico"/>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="/resources/demos/style.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="../lib/jQuery/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+		<!-- 必须先引入jQuery再引入BootStrape -->
+		</script>
+		
+		<script type="text/javascript" src="../lib/jQuery/bootstrap-3.3.7-dist/js/bootstrap.min.js">
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				$("a.gogo").attr("target","_blank")
+				$("a").attr("target", "_self")
+				$( "#accordion" ).accordion({
+				  collapsible: true
+				});
+			})
+		</script>
+		<style type="text/css">
+			body{
+				background-color: #AFD9EE;
+			}
+			.a{
+				color: white;
+				font-family: "楷体";
+			}
+			.a:hover{
+				color: #286090;
+			}
+			
+			.ttcontent{
+				display: block;
+				height: 180px;
+				line-height: 60px;
+				background-color: #FFF0F5;
+				text-align: left;
+				font-size: 25px;
+			}
+			.ttcontent .typess{
+				display: block;
+				list-style: none;
+			}
+			.typess li{
+				float: left;
+				margin-left: 30px;
+			}
+			.typess li a:hover{
+				text-decoration: none;
+				color: black;
+			}
+			.pagination li{
+				width: 90px;
+			}
+			#accordion{
+				font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+				font-size: 35px;
+				margin-bottom: 100px;
+			}
+			#accordion p{
+				color: black;
+				font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+				font-size: 35px;
+			}
+			
+			#accordion li{
+				font-family: 宋体;
+				font-size: 30px;
+			}
+			
+			.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+				/* border: 1px solid #003eff; */
+				background: #286090;
+				font-weight: normal;
+				color: #ffffff;
+			}
+			
+			
+			
+			
+			.bottoms{
+				position: relative;
+				bottom: -200px;
+				color: white;
+				/* margin: 0 10%; */
+				line-height: 45px;
+				text-align: center;
+			}
+			.bottomu{
+				display: block;
+				border-bottom:1px white solid ;
+				height: 45px;
+				/* float: left; */
+				list-style: none;
+			}
+			.bottomu li{
+				float: left;
+				font-family: '楷体';
+				/* color: white; */
+				font-size: 35px;
+			}
+			.bottomu li a{
+				text-align: none;
+				font-family: '楷体';
+				color: white;
+				font-size: 30px;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+	<div>
+		<!-- 导航条 -->
+		<nav class="navbar navbar-default" style="background-color: #286090">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"><a href="mailto:"></a></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" style="font-size: 3.75rem; color: white;" href="index.html">MOOC</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li style="font-size: 20px; color: gainsboro; margin-top: 0.9375rem;" >从这里爱上学习<span class="sr-only">(current)</span></li>
+
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="login.html" style="color: white;">登录</a></li>
+					<li><a href="#" style="pointer-events: none;">|</a></li>
+					<li><a href="Register.html" style="color: white;">注册</a></li>
+					<li><a href="#" style="pointer-events: none;"> </a></li>
+
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="搜索课程">
+					</div>
+					<button type="submit" class="btn btn-default">搜索</button>
+				</form>
+				
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	
+  <!-- Indicators -->
+  <!-- 轮播图 -->
+	<div style=" width: 80%; margin: 0 auto;">
+		<!-- 在这里添加首页的导航条 -->
+		<div style="margin-bottom: 20px; background-color: #286090; height: 70px; font-size: 35px;">
+			<ul class="nav nav-pills">
+			  <li role="presentation"  class="active"><a href="index.html" class="a">首页</a></li>
+			  <li role="presentation"><a href="online_classes.html" class="a">在线课程</a></li>
+			  <li role="presentation"><a href="online_videos.html" class="a">在线视频</a></li>
+			  <li role="presentation"><a href="partners.html" class="a">合作院校</a></li>
+			</ul>
+		</div>
+		
+			
+	
+		<div id="accordion">
+			<p>常见问题</p>
+			<div>
+				<p>
+				是否可以选择同一门课程？
+				</p>
+				<ul>
+					<li>可以。许多课程会多次开课，你可以多次报名。</li>
+				</ul>
+				
+				<p>
+					课程结束后，我还能继续看到课程内容吗？
+				</p>
+				<ul>
+					<li>部分课程将在课程结束后关闭，部分课程允许已选课的用户查看历史记录，根据所选课程要求而定</li>
+				</ul>
+				
+				<p>
+					忘记登录密码怎么办？
+				</p>
+				<ul>
+					<li>提供昵称，发送邮件到绑定的邮箱，更改密码</li>
+				</ul>
+				
+			</div>
+			<p>我的课程</p>
+			<div>
+				<p>
+				我选的课程没有出现在课程列表中怎么办？
+				</p>
+				<ol>
+					<li>检查你是否使用正确的邮箱地址登陆；</li>
+					<li>确认你已注册了该课程（如果已注册成功，你将收到课程确认邮件）。</li>
+					<li>如果完成上述检查后问题仍存在，请<a href="contact_us.html" style="color: red;">联系我们</a>。</li>
+				</ol>
+				<p>如何退出一门课程</p>
+				<ul>
+					<li>进入“我的课程”列表，将鼠标移动到要退出的课堂上，点击退出即可</li>
+				</ul>
+			</div>
+			<p>测验与作业</p>
+			<div>
+				<p>
+				如何完成测验
+				</p>
+				<ul>
+					<li>进入课程页面，点击左侧栏的“测验与作业”，即可进入课程测验</li>
+				</ul>
+			</div>
+			<p>考试</p>
+			<div>
+				<p>
+				如何参加考试
+				</p>
+				<ul>
+				<li>进入课程学习页面，点击左侧栏的“考试”，即可参加当前开放的考试。</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		<div class="bottoms"  style="width: 100%; background-color: #286090;">
+			<ul class="bottomu">
+				<li style="width: 25%;"><a href="contact_us.html">联系我们</a></li>
+				<li style="width: 25%;"><a href="about_us.html">关于我们</a></li>
+				<li style="width: 25%;"><a href="questions.html">咨询问题</a></li>
+				<li style="width: 25%;"><a href="teacher_certification.html">讲师认证</a></li>
+			</ul>
+			<div >
+				<ul style="list-style: none; width: 100%;" >
+					<li style="height: 35px; line-height: 20px; font-size: 20px; text-align: center;">设计者：Shirlesha&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp本网站用于在线学习&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp版权所有，请勿商用</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	<!-- 底部 -->
+	<!-- <div class="bottomm" style="margin-top: 20px; background-color: #286090; height: 100px;">
+		<div class="bottoms"  style="margin: 0 10%;">
+			<ul class="bottomu">
+				<li style="margin-left: 50px;">友情链接</li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">咨询问题</a></li>
+				<li><a href="#">讲师认证</a></li>
+			</ul>
+			<div class="left">
+				<ul style="list-style: none; margin-right: 200px;" >
+					<li>设计者：Shirlesha&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp本网站用于在线学习         版权所有，请勿商用</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div> -->
+</div>
+	</body>
+</html>

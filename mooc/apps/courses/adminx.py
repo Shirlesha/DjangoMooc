@@ -6,13 +6,13 @@ import xadmin
 
 class CourseAdmin(object):
     list_display = ['name', 'desc', 'detail',
-                    'teacher',
+                    'lecturer',
                     'degree',
                     'learn_times',
                     'students',
                     ]
     # 搜索框
-    search_fields = ['name', 'desc', 'detail', 'degree', 'students', 'teacher']
+    search_fields = ['name', 'desc', 'detail', 'degree', 'students', 'lecturer']
     list_filter = [
         'name',
         'desc',

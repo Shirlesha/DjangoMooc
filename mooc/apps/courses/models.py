@@ -13,8 +13,8 @@ class Course(models.Model):
         ("zj", u"中级"),
         ("gj", u"高级")
     )
-    course_org = models.ForeignKey(SchoolName, on_delete=models.CASCADE, verbose_name=u"学校名称", null=True, blank=True)
-    teacher = models.ForeignKey(Lecturer, on_delete=models.CASCADE, verbose_name=u"讲师", null=True, blank=True)
+    school_name = models.ForeignKey(SchoolName, on_delete=models.CASCADE, verbose_name=u"学校名称", null=True, blank=True)
+    lecturer = models.ForeignKey(Lecturer, on_delete=models.CASCADE, verbose_name=u"讲师", null=True, blank=True)
     name = models.CharField(max_length=50, verbose_name=u"课程名")
     desc = models.CharField(max_length=300, verbose_name=u"课程描述")
     # TextField允许我们不输入长度。可以输入到无限大。暂时定义为TextFiled，之后更新为富文本
@@ -34,7 +34,7 @@ class Course(models.Model):
     prepare = models.CharField(max_length=300, default=u"什么都不需要准备，带着一颗好学的心，可以学会你想要的", verbose_name=u"课前准备")
     reference = models.CharField(max_length=300, default=u"参考资料如下：", verbose_name=u"参考资料")
 
-    teacher_tell = models.CharField(max_length=300, default=u"从现在开始努力，未来可期", verbose_name=u"讲师有话说")
+    lecturer_tell = models.CharField(max_length=300, default=u"从现在开始努力，未来可期", verbose_name=u"讲师有话说")
 
     image = models.ImageField(
         upload_to="courses/%Y/%m",
@@ -86,7 +86,7 @@ class Video(models.Model):
     # 因为一个章节对应很多视频。所以在视频表中将章节设置为外键。
     # 作为一个字段来存储让我们可以知道这个视频对应哪个章节.
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, verbose_name=u"章节")
-    url = models.CharField(max_length=200, default="http://jdvodrvfb210d.vod.126.net/mooc-video/nos/mp4/2016/07/15/1004675001_2fd2c2f7cd1f4ae5919593adee0db8b3_shd.mp4", verbose_name=u"访问地址")
+    url = models.CharField(max_length=200, default=u"http://jdvodrvfb210d.vod.126.net/mooc-video/nos/mp4/2016/07/15/1004675001_2fd2c2f7cd1f4ae5919593adee0db8b3_shd.mp4", verbose_name=u"访问地址")
     name = models.CharField(max_length=100, verbose_name=u"视频名")
     # 使用分钟做后台记录(存储最小单位)前台转换
     learn_times = models.IntegerField(default=0, verbose_name=u"学习时长(分钟数)")

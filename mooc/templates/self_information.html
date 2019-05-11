@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人信息</title>
+		<!-- <link rel="icon" href="aa.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="aa.ico">
+		<link rel="Bookmark" href="aa.ico"> -->
+		
+		<link rel="SHORTCUT ICON" href="study2.ico"/>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="/resources/demos/style.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="../lib/jQuery/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+		<!-- 必须先引入jQuery再引入BootStrape -->
+		</script>
+		
+		<script type="text/javascript" src="../lib/jQuery/bootstrap-3.3.7-dist/js/bootstrap.min.js">
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				$("a.gogo").attr("target","_blank")
+				$("a").attr("target", "_self")
+				$( "#accordion" ).accordion({
+				  collapsible: true
+				});
+				// $("video.srcsrc").attr("src","")
+			})
+			// document.getElementById("shows").style.display="none";
+			
+		</script>
+		<script type="text/javascript">
+// 			document.getElementById("cpass").onclick=function(){
+// 			document.getElementById("shows").style.display="none";
+// 			}
+			// document.getElementsByTagName("video")[0].src = "";
+			// document.getElementsByTagName("video")[0].removeAttribute("src");
+// 			$("a.vides").click(function(){
+// 				// $("a.vides").addClass("actived");
+// 				var js = document.getElementsByClassName("vides")[0].href
+// 				console.log("js")
+// 				$("video.srcsrc").attr("src","js")
+// 
+// 			});
+// 			$("input.cpass").click(function(){
+// 				$("input.passwordss").attr("display","block");
+// 			})
+// 			document.getElementsByClassName("cpass").onclick=function(){
+// 			document.getElementsByClassName("passwordss").style.display="block";
+// 			}
+			
+		</script>
+		<style type="text/css">
+			body{
+				background-color: #AFD9EE;
+			}
+			.a{
+				color: white;
+				font-family: "楷体";
+			}
+			.a:hover{
+				color: #286090;
+			}
+			
+			
+			
+			.pagination li{
+				width: 90px;
+			}
+			
+			.listss ul{
+				font-size: 70px;
+				list-style: none;
+				display: block;
+				margin-left: -35px;
+				font-family: 楷体;
+			}
+			.listss ul li{
+				width: 100%;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				border-bottom: 1px solid #286090;
+			}
+			
+			
+			.listss a{
+				font-size: 35px;
+				display: block;
+				color: #286090;
+				font-family:楷体;
+				font-family: 宋体;
+			}
+			
+			.listss a:hover{
+				color: white;
+				background-color: #286090;
+				text-decoration: none;
+			}
+			.listss a:active{
+				color: red;
+			}
+			
+			
+			.changess{
+				display: block;
+				height: 35px;
+				line-height: 35px;
+				margin: 0 auto;
+				border: 0;
+				background-color: yellow;
+				/* -webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+				color: #fff !important;
+				cursor: pointer;
+				text-align: center;
+				text-indent: 0 !important; */
+			}
+			
+			.uploads{
+				position: absolute;
+				left: 10px;
+				top: -30px;
+				height: 35px;
+				opacity: 0;
+				/* filter: Alpha(opacity=0); */
+				cursor: pointer;
+			}
+			.introduces ul{
+				list-style: none;
+				
+				font-size: 30px;
+				margin-top: 20px;
+			}
+			.introduces ul li{
+				height: 80px;
+				margin-top: 1px;
+				line-height: 80px;
+				border: 1px solid #286090;
+			}
+			.introduces ul li input{
+				line-height: 60px;
+				
+				/* width: 60%; */
+			}
+			.inin{
+				width: 60%;
+			}
+			.passwordss{
+				margin-right: 2px;
+				
+			}
+			.passwordss input{
+				width: 50%;
+			}
+			
+			
+			
+			#accordion{
+				font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+				font-size: 35px;
+				margin-bottom: 100px;
+			}
+			#accordion ul{
+				list-style: none;
+			}
+			#accordion p{
+				font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+				font-size: 35px;
+			}
+			
+			#accordion li{
+				font-size: 30px;
+				margin-top: 10px;
+				margin-left: -30px;
+
+			}
+			#accordion li a {
+				font-size: 30px;
+				
+			}
+			#accordion li a:visited {
+				color: #1B6D85;
+				
+			}
+			.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+				/* border: 1px solid #003eff; */
+				background: #286090;
+				font-weight: normal;
+				color: #ffffff;
+			}
+			
+			
+			
+			.bottoms{
+				position: relative;
+				bottom: 0px;
+				color: white;
+				/* margin: 0 10%; */
+				line-height: 45px;
+				text-align: center;
+			}
+			.bottomu{
+				display: block;
+				border-bottom:1px white solid ;
+				height: 45px;
+				/* float: left; */
+				list-style: none;
+			}
+			.bottomu li{
+				float: left;
+				font-family: '楷体';
+				/* color: white; */
+				font-size: 35px;
+			}
+			.bottomu li a{
+				text-align: none;
+				font-family: '楷体';
+				color: white;
+				font-size: 30px;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+	<div>
+		<!-- 导航条 -->
+		<nav class="navbar navbar-default" style="background-color: #286090">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"><a href="mailto:"></a></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" style="font-size: 3.75rem; color: white;" href="index.html">MOOC</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li style="font-size: 20px; color: gainsboro; margin-top: 0.9375rem;" >从这里爱上学习<span class="sr-only">(current)</span></li>
+
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="login.html" style="color: white;">登录</a></li>
+					<li><a href="#" style="pointer-events: none;">|</a></li>
+					<li><a href="Register.html" style="color: white;">注册</a></li>
+					<li><a href="#" style="pointer-events: none;"> </a></li>
+
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="搜索课程">
+					</div>
+					<button type="submit" class="btn btn-default">搜索</button>
+				</form>
+				
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	
+  <!-- Indicators -->
+  <!-- 轮播图 -->
+	<div style=" width: 80%; margin: 0 auto;">
+		<!-- 在这里添加首页的导航条 -->
+		<div style="margin-bottom: 20px; background-color: #286090; height: 70px; font-size: 35px;">
+			<ul class="nav nav-pills">
+			  <li role="presentation"><a href="index.html" class="a">首页</a></li>
+			  <li role="presentation" class="active"><a href="online_classes.html" class="a">在线课程</a></li>
+			  <li role="presentation"><a href="online_videos.html" class="a">在线视频</a></li>
+			  <li role="presentation"><a href="partners.html" class="a">合作院校</a></li>
+			</ul>
+		</div>
+		
+		<!-- 视频详情 -->
+		<div class="contains" style="height: 1650px; background-color: white;">
+			<div class="contents">
+				<div class="details">
+					<!-- 增加一个地址导航栏 -->
+					<div style="height: 40px; font-size: 30px; font-family: 楷体;  ">
+						<ol class="breadcrumb">
+							<li><a href="index.html">首页</a></li>
+							<li><a href="online_classes.html">个人中心</a></li>
+							<li class="active">个人资料</li>
+						</ol>
+					</div>	
+					<!-- <div style="height: 40px; font-size: 20px;">
+						<a href="index.html">首页</a>
+						<span>></span>
+						<a href="online_classes.html">在线课程</a>
+						<span>></span>
+						<span>太极拳医学</span>
+					</div>
+					 -->
+					<div style="border-top: #286090 1px solid; margin-top: 20px;">
+						<div class="listss" style="float: left; width: 20%; border-right: 1px solid #286090; height: 1550px;">
+							<ul>
+								<li><a href="#">个人资料</a></li>
+								<li><a href="#">参加课程</a></li>
+								<li><a href="#">我的收藏</a></li>
+							</ul>
+							
+
+						</div>
+						<div class="introduces" style="float: right; height: 1550px; width: 79%; border-left: 1px solid #286090;">
+							<div style="border-bottom: 1px solid #286090;">
+							<!-- <div class="col-sm-4 col-md-3"> -->
+							<!-- 这里可不可以设置django传参，通过重定向传参，然后设置src的值为a的值 activate的a然后传递href给src -->
+								<span style="font-size: 40px; margin-left: 40px;">个人信息</span>
+							</div>
+							<div style=" height: 600px;border-bottom: 1px solid #286090;">
+								<div class="left_info" style="width: 15%; float: left;">
+									<form action="" method="post" style=" border-right: 1px solid #286090;  border-bottom: 1px solid #286090;">
+										<span>
+											<img src="../images/head/girl1.jpg" style="margin: 0 10%; margin-top: 20px; width: 80%;" alt="修改头像">
+										</span>
+										<br>
+										<span style="position: relative;">
+											<br>
+											<span class="changess" style="font-size: 20px;text-align: center; width: 100%;">修改头像</span>
+											<input class="uploads" type="file" name="images">
+										</span>
+									</form>
+								</div>
+								<div class="right-info" style="width: 84%; float: right; margin-right: 2px;">
+									<form action="" method="post" style="width: 100%;">
+										<ul>
+											<li>昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称&nbsp;&nbsp;：<input class="inin" type="text"></li>
+											<li>生&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;：<input class="inin" type="text"></li>
+											<li>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别&nbsp;&nbsp;：
+											<input style="width: 20px; height: 20px; font-size: 10px;" type="radio" name="gender" value="woman">&nbsp;男&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<input style="width: 20px; height: 20px; font-size: 10px;" type="radio" name="gender" value="man">&nbsp;女</li>
+											<li>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址&nbsp;&nbsp;：<input class="inin" type="text" placeholder="请输入你的地址"> </li>
+											<li>手&nbsp;&nbsp;&nbsp;机&nbsp;&nbsp;&nbsp;号&nbsp;&nbsp;：<input class="inin" type="text"></li>
+											<li>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱&nbsp;&nbsp;：<input class="inin" type="text"></li>
+											<li><input id="cpass" style="width: 150px; margin: 0 10%;" type="button" value="修改密码">&nbsp;&nbsp;&nbsp;<input style="width: 150px; margin-left: 10%;" type="submit"value="保存"></li>
+										</ul>
+									</form>
+								</div>
+							</div>
+							<div>
+								<div class="passwordss" id="shows" style="display: none;">
+									<form action="" method="post">
+										<ul>
+											<li>原&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;&nbsp;&nbsp;：<input type="text"></li>
+											<li>新&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;&nbsp;&nbsp;：<input type="text"></li>
+											<li>确&nbsp;&nbsp;认&nbsp;&nbsp;新&nbsp;&nbsp;密&nbsp;&nbsp;码&nbsp;：<input type="text"></li>
+											<li><input style="width: 150px; margin: 0 10%;" type="submit" value="确认修改">&nbsp;&nbsp;&nbsp;<input style="width: 150px; margin-left: 10%;" type="reset"value="重置"></li>
+										</ul>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="bottoms"  style="width: 100%; margin-top: 130px; background-color: #286090;">
+			<ul class="bottomu">
+				<li style="width: 25%;"><a href="contact_us.html">联系我们</a></li>
+				<li style="width: 25%;"><a href="about_us.html">关于我们</a></li>
+				<li style="width: 25%;"><a href="questions.html">咨询问题</a></li>
+				<li style="width: 25%;"><a href="teacher_certification.html">讲师认证</a></li>
+			</ul>
+			<div >
+				<ul style="list-style: none; width: 100%;" >
+					<li style="height: 35px; line-height: 20px; font-size: 20px; text-align: center;">设计者：Shirlesha&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp本网站用于在线学习&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp版权所有，请勿商用</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	<!-- 底部 -->
+	<!-- <div class="bottomm" style="margin-top: 20px; background-color: #286090; height: 100px;">
+		<div class="bottoms"  style="margin: 0 10%;">
+			<ul class="bottomu">
+				<li style="margin-left: 50px;">友情链接</li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">咨询问题</a></li>
+				<li><a href="#">讲师认证</a></li>
+			</ul>
+			<div class="left">
+				<ul style="list-style: none; margin-right: 200px;" >
+					<li>设计者：Shirlesha&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp本网站用于在线学习         版权所有，请勿商用</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div> -->
+</div>
+	<script type="text/javascript">
+		document.getElementById("cpass").onclick=function(){
+			if (document.getElementById("shows").style.display=="none"){
+				document.getElementById("shows").style.display="block";
+			}
+			else{
+				document.getElementById("shows").style.display= "none";
+			}
+		}
+	</script>
+
+	</body>
+</html>

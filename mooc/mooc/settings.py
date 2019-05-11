@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'DjangoUeditor',
     'xadmin',
     'crispy_forms',
+    'pure_pagination',
 ]
 
 # 此处重载是为了使我们的UserProfile生效
@@ -94,7 +95,7 @@ WSGI_APPLICATION = 'mooc.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'moocs0',
+        'NAME': 'mooc1',
         'USER': 'root',
         'PASSWORD': '123456',
         'HOST': '127.0.0.1',
@@ -146,3 +147,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+# 上传文件路径配置
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# import smtplib
+# from email.mime.text import MIMEText
+
+# 发送邮件的setting设置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True  # 是否使用TLS安全传输协议(用于在两个通信应用程序之间提供保密性和数据完整性。)
+EMAIL_HOST = 'smtp.163.com'  # 发送邮件的邮箱 的 SMTP服务器，这里用了163邮箱
+EMAIL_PORT = 25  # 发件箱的SMTP服务器端口
+EMAIL_HOST_USER = "shirlesha@163.com"  # 发送邮件的邮箱地址
+EMAIL_HOST_PASSWORD = "Shirlesha0"
+EMAIL_FROM = 'Shirlesha<shirlesha@163.com>'

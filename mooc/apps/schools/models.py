@@ -19,13 +19,13 @@ class CityDict(models.Model):
 
 class SchoolName(models.Model):
     """学校名称"""
-    # ORG_CHOICES = (
+    # School_CHOICES = (
     #     #     ("pxjg", u"培训机构"),
     #     #     ("gx", u"高校"),
     #     #     ("gr", u"个人"),
     #     # )
 
-    Name_CHOICES = (
+    SCHOOL_CHOICES = (
         ("one", u"国内名校"),
         ("two", u"普通本科院校"),
         ("three", u"普通专科院校"),
@@ -35,13 +35,13 @@ class SchoolName(models.Model):
     # 学校描述，后面会替换为富文本展示
     desc = models.TextField(verbose_name=u"学校描述")
     # 学校类别:
-    category = models.CharField(max_length=20, choices=Name_CHOICES, verbose_name=u"学校类别", default="one")
+    category = models.CharField(max_length=20, choices=SCHOOL_CHOICES, verbose_name=u"学校类别", default="one")
     tag = models.CharField(max_length=10, default=u"国内名校", verbose_name=u"学校标签")
     # 不需要学校的点击数和收藏数
     # click_nums = models.IntegerField(default=0, verbose_name=u"点击数")
     # fav_nums = models.IntegerField(default=0, verbose_name=u"收藏数")
     image = models.ImageField(
-        upload_to="org/%Y/%m",
+        upload_to="school/%Y/%m",
         verbose_name=u"Logo",
         max_length=100)
     address = models.CharField(max_length=150, verbose_name=u"学校地址")
@@ -66,7 +66,7 @@ class Lecturer(models.Model):
     """讲师"""
     # 一个学校会有很多老师，所以我们在讲师表添加外键并把学校名称保存下来
     # 可以使我们通过讲师找到对应的学校
-    org = models.ForeignKey(SchoolName, on_delete=models.CASCADE, verbose_name=u"所属学校")
+    school = models.ForeignKey(SchoolName, on_delete=models.CASCADE, verbose_name=u"所属学校")
     name = models.CharField(max_length=50, verbose_name=u"教师名称")
     work_years = models.IntegerField(default=0, verbose_name=u"工作年限")
     # 这里去掉了就职公司
@@ -78,7 +78,7 @@ class Lecturer(models.Model):
     fav_nums = models.IntegerField(default=0, verbose_name=u"收藏数")
     image = models.ImageField(
         default='',
-        upload_to="teacher/%Y/%m",
+        upload_to="lecturer/%Y/%m",
         verbose_name=u"头像",
         max_length=100)
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u"添加时间")
@@ -88,5 +88,5 @@ class Lecturer(models.Model):
         verbose_name_plural = verbose_name
 
     def __str__(self):
-        return "[{0}]的讲师: {1}".format(self.org, self.name)
+        return "[{0}]的讲师: {1}".format(self.school, self.name)
 

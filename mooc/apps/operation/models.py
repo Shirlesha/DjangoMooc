@@ -51,8 +51,8 @@ class UserFavorite(models.Model):
 
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, verbose_name=u"用户")
     # course = models.ForeignKey(Course, verbose_name=u"课程")
-    # teacher = models.ForeignKey()
-    # org = models.ForeignKey()
+    # lecturer = models.ForeignKey()
+    # school = models.ForeignKey()
     # fav_type =
 
     # 机智版

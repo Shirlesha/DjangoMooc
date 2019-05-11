@@ -23,9 +23,9 @@ class SchoolNameAdmin(object):
 
 class LecturerAdmin(object):
     """讲师后台管理器"""
-    list_display = ['name', 'org', 'work_years', 'work_company', 'work_position', 'add_time']
-    search_fields = ['org', 'name', 'work_years', 'work_company', 'work_position']
-    list_filter = ['org__name', 'name', 'work_years', 'work_company', 'work_position', 'add_time']
+    list_display = ['name', 'school', 'work_years', 'work_company', 'work_position', 'add_time']
+    search_fields = ['school', 'name', 'work_years', 'work_company', 'work_position']
+    list_filter = ['school__name', 'name', 'work_years', 'work_company', 'work_position', 'add_time']
 
 
 xadmin.site.register(CityDict, CityDictAdmin)

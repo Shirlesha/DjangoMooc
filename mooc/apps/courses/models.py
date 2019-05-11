@@ -13,15 +13,14 @@ class Course(models.Model):
         ("zj", u"中级"),
         ("gj", u"高级")
     )
-    course_org = models.ForeignKey(SchoolName, on_delete=models.CASCADE, verbose_name=u"所属机构", null=True, blank=True)
+    course_org = models.ForeignKey(SchoolName, on_delete=models.CASCADE, verbose_name=u"学校名称", null=True, blank=True)
     teacher = models.ForeignKey(Lecturer, on_delete=models.CASCADE, verbose_name=u"讲师", null=True, blank=True)
     name = models.CharField(max_length=50, verbose_name=u"课程名")
     desc = models.CharField(max_length=300, verbose_name=u"课程描述")
     # TextField允许我们不输入长度。可以输入到无限大。暂时定义为TextFiled，之后更新为富文本
     # 修改image path,不能传y m 进来，不能加斜杠是一个相对路径，相对于setting中配置的media root
-    # detail = UEditorField(verbose_name=u"课程详情", width=600, height=300, imagePath="courses/ueditor/",
-    # filePath="courses/ueditor/", default='')
-    detail = UEditorField(verbose_name=u"课程详情", width=600, height=300, imagePath="courses/ueditor/", filePath="courses/ueditor/", default='')
+    detail = UEditorField(verbose_name=u"课程详情", width=600, height=300, imagePath="courses/ueditor/",
+                          filePath="courses/ueditor/", default='')
     is_banner = models.BooleanField(default=False, verbose_name=u"是否轮播")
     degree = models.CharField(choices=DEGREE_CHOICES, max_length=2, verbose_name=u"难度")
     # 使用分钟做后台记录(存储最小单位)前台转换
@@ -30,7 +29,13 @@ class Course(models.Model):
     students = models.IntegerField(default=0, verbose_name=u"学习人数")
     fav_nums = models.IntegerField(default=0, verbose_name=u"收藏人数")
     you_need_know = models.CharField(max_length=300, default=u"一颗勤学的心是本课程必要前提", verbose_name=u"课程须知")
-    teacher_tell = models.CharField(max_length=300, default=u"什么都可以学到,按时交作业,不然叫家长", verbose_name=u"老师告诉你")
+    # 这里加了授课目标、课前准备、参考资料
+    target = models.CharField(max_length=300, default=u"期望你什么都可以学会，未来可期，加油", verbose_name=u"授课目标")
+    prepare = models.CharField(max_length=300, default=u"什么都不需要准备，带着一颗好学的心，可以学会你想要的", verbose_name=u"课前准备")
+    reference = models.CharField(max_length=300, default=u"参考资料如下：", verbose_name=u"参考资料")
+
+    teacher_tell = models.CharField(max_length=300, default=u"从现在开始努力，未来可期", verbose_name=u"讲师有话说")
+
     image = models.ImageField(
         upload_to="courses/%Y/%m",
         verbose_name=u"封面图",

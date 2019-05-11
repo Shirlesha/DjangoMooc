@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'schools',
     'courses',
     'DjangoUeditor',
+    'xadmin',
+    'crispy_forms',
 ]
 
 # 此处重载是为了使我们的UserProfile生效

@@ -70,7 +70,7 @@ class Lecturer(models.Model):
     name = models.CharField(max_length=50, verbose_name=u"教师名称")
     work_years = models.IntegerField(default=0, verbose_name=u"工作年限")
     # 这里去掉了就职公司
-    # work_company = models.CharField(max_length=50, verbose_name=u"就职公司")
+    work_company = models.CharField(max_length=50, verbose_name=u"所属学校", default="北京大学")
     work_position = models.CharField(max_length=50, verbose_name=u"职称")
     age = models.IntegerField(default=18, verbose_name=u"年龄")
     points = models.CharField(max_length=50, verbose_name=u"教学特点")

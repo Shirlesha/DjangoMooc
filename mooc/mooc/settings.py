@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'courses',
     'DjangoUeditor',
     'xadmin',
+    'captcha',
     'crispy_forms',
     'pure_pagination',
 ]
@@ -66,7 +67,7 @@ ROOT_URLCONF = 'mooc.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,6 +75,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                "django.template.context_processors.i18n",
+                'django.template.context_processors.media',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -142,6 +146,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+# 数据库存储使用时间，True时间会被存为UTC的时间
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -154,7 +160,7 @@ STATICFILES_DIRS = [
 
 # 上传文件路径配置
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 
 # import smtplib
 # from email.mime.text import MIMEText

@@ -358,3 +358,8 @@ class LecturerDetailView(View):
             "has_fav_lecturer": has_fav_lecturer,
             "has_fav_school": has_fav_school,
         })
+
+
+class LecturerCertificationView(View):
+    def get(self, request):
+        return render(request, "lecturer_certification.html", {})

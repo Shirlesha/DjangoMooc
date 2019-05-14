@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block titile %}
-首页 | mtianyan慕课小站
+首页 | MOOC爱上学习
 {% endblock %}
 
 {% load staticfiles %}
@@ -9,9 +9,9 @@
 {% block custom_bread %}
 {% endblock %}
 
-
 {% block content %}
-    <div class="banner">
+    <div class="banner" style="height: 1000px;">
+		<div style=" width: 80%; margin: 0 auto;">
 			<div class="wp">
 				<div class="fl">
 					<div class="imgslide">
@@ -20,12 +20,10 @@
                             {% for banner in all_banner %}
                             <li>
                                     <a href="{{ banner.url }}">
-                                        <img width="1200" height="478" src="/static/media/{{ banner.image }}" />
+                                        <img width="1530" height="350" src="{{ MEDIA_URL }}{{ banner.image }}" />
                                     </a>
                                 </li>
-                            {% empty %}
-                                什么也没有
-                            {% endfor %}
+                    {% endfor %}
 
 						</ul>
 					</div>
@@ -34,132 +32,85 @@
 				</div>
 
 				</div>
+		</div>
+
+    </div>
 
 
-			</div>
 <!--banner end-->
 <!--feature start-->
-	<section>
-		<div class="wp">
-			<ul class="feature">
-				<li class="feature1">
-					<img class="pic" src="{% static 'images/feature1.png' %}"/>
-					<p class="center">专业权威</p>
-				</li>
-				<li class="feature2">
-					<img class="pic" src="{% static 'images/feature2.png' %}"/>
-					<p class="center">课程最新</p>
-				</li>
-				<li class="feature3">
-					<img class="pic" src="{% static 'images/feature3.png' %}"/>
-					<p class="center">名师授课</p>
-				</li>
-				<li class="feature4">
-					<img class="pic" src="{% static 'images/feature4.png' %}"/>
-					<p class="center">数据真实</p>
-				</li>
-			</ul>
-		</div>
-	</section>
+
 <!--feature end-->
 <!--module1 start-->
-	<section>
-		<div class="module">
-			<div class="wp">
-				<h1>公开课程</h1>
-				<div class="module1 eachmod">
-					<div class="module1_1 left">
-						<img width="228" height="614" src="{% static 'images/module1_1.jpg' %}"/>
-						<p class="fisrt_word">名师授课<br/>专业权威</p>
-						<a class="more" href="{% url 'course:list' %}">查看更多课程 ></a>
-					</div>
-					<div class="right group_list">
-						<div class="module1_2 box">
-							<div class="imgslide2">
-								<ul class="imgs">
 
-                                    {% for banner_course in banner_courses %}
-                                                                        <li>
-                                        <a href="{% url 'course:course_detail' banner_course.id %}">
-                                            <img width="470" height="300" src="/static/media/{{ banner_course.image }}" />
-                                        </a>
-                                    </li>
-                                    {% empty %}
-                                        没有课程
-                                    {% endfor %}
-
-								</ul>
-							</div>
-							<div class="unslider-arrow2 prev"></div>
-							<div class="unslider-arrow2 next"></div>
-						</div>
-
-                    {% for course in courses %}
-                            <div class="module1_{{ forloop.counter|add:2 }} box">
-                                <a href="{% url 'course:course_detail' course.id %}">
-                                    <img width="233" height="190" src="/static/media/{{ course.image }}"/>
-                                </a>
-                                <div class="des">
-                                    <a href="{% url 'course:course_detail' course.id %}">
-                                        <h2 title="{{ course.name }}">{{ course.name }}</h2>
-                                    </a>
-                                    <span class="fl">难度：<i class="key">{{ course.get_degree_display }}</i></span>
-                                    <span class="fr">学习人数：{{ course.stu_nums }}</span>
-                                </div>
-                                <div class="bottom">
-                                    <span class="fl" title="{{ course.course_school.name }}">{{ course.course_school.name }}</span>
-                                    <span class="star fr">{{ course.fav_nums }}</span>
-                                </div>
-                            </div>
-                    {% empty %}
-                        什么也没有
-                    {% endfor %}
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="module greybg">
-			<div class="wp">
-				<h1>课程机构</h1>
-				<div class="module3 eachmod">
-					<div class="module3_1 left">
-						<img width="228" height="463" src="{% static 'images/module3_1.jpg' %}"/>
-						<p class="fisrt_word">名校来袭<br/>权威认证</p>
-						<a class="more" href="{% url 'school:school_list' %}">查看更多机构 ></a>
-					</div>
-					<div class="right">
-						<ul>
-                        {% for school in course_schools %}
-                            <li class="{% if forloop.counter|divisibleby:'5' %}five{% endif %}">
-                                    <a href="{% url 'school:school_home' school.id %}">
-                                        <div class="company">
-                                            <img width="184" height="100" src="/static/media/{{ school.image }}"/>
-                                            <div class="score">
-                                                <div class="circle">
-                                                    <h2>{{ school.tag }}</h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p><span class="key" title="{{ school.name }}">{{ school.name }}</span></p>
-                                    </a>
-                                </li>
-                        {% empty %}
-                            什么也没有
-                        {% endfor %}
-
-
-
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 {% endblock %}
 
 {% block custom_js %}
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+<style type="text/css">
+			body{
+				background-color: #AFD9EE;
+			}
+			.a{
+				color: white;
+				font-family: "楷体";
+			}
+			.a:hover{
+				color: #286090;
+			}
+
+			.ttcontent{
+				display: block;
+				height: 180px;
+				line-height: 60px;
+				background-color: #FFF0F5;
+				text-align: left;
+				font-size: 25px;
+			}
+			.ttcontent .typess{
+				display: block;
+				list-style: none;
+			}
+			.typess li{
+				float: left;
+				margin-left: 30px;
+			}
+			.typess li a:hover{
+				text-decoration: none;
+				color: black;
+			}
+			.pagination li{
+				width: 90px;
+			}
+
+			.bottoms{
+				position: relative;
+				bottom: 0px;
+				color: white;
+				/* margin: 0 10%; */
+				line-height: 45px;
+				text-align: center;
+			}
+			.bottomu{
+				display: block;
+				border-bottom:1px white solid ;
+				height: 45px;
+				/* float: left; */
+				list-style: none;
+			}
+			.bottomu li{
+				float: left;
+				font-family: '楷体';
+				/* color: white; */
+				font-size: 35px;
+			}
+			.bottomu li a{
+				text-align: none;
+				font-family: '楷体';
+				color: white;
+				font-size: 30px;
+			}
+
+
+		</style>
 {% endblock %}

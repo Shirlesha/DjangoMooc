@@ -1,0 +1,169 @@
+body{
+	background-color: #AFD9EE;
+	}
+.a{
+	color: white;
+	font-family: "楷体";
+}
+.a:hover{
+	color: #286090;
+}
+
+
+
+.pagination li{
+	width: 90px;
+}
+
+.listss ul{
+	font-size: 70px;
+	list-style: none;
+	display: block;
+	margin-left: -35px;
+	font-family: 楷体;
+}
+.listss ul li{
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	border-bottom: 1px solid #286090;
+}
+
+
+.listss a{
+	font-size: 35px;
+	display: block;
+	color: #286090;
+	font-family:楷体;
+	font-family: 宋体;
+}
+
+.listss a:hover{
+	color: white;
+	background-color: #286090;
+	text-decoration: none;
+}
+.listss a:active{
+	color: red;
+}
+
+
+.changess{
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	margin: 0 auto;
+	border: 0;
+	background-color: yellow;
+	/* -webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	color: #fff !important;
+	cursor: pointer;
+	text-align: center;
+	text-indent: 0 !important; */
+}
+
+.uploads{
+	position: absolute;
+	left: 10px;
+	top: -30px;
+	height: 35px;
+	opacity: 0;
+	/* filter: Alpha(opacity=0); */
+	cursor: pointer;
+}
+.introduces ul{
+	list-style: none;
+	
+	font-size: 30px;
+	margin-top: 20px;
+}
+.introduces ul li{
+	height: 80px;
+	margin-top: 1px;
+	line-height: 80px;
+	border: 1px solid #286090;
+}
+.introduces ul li input{
+	line-height: 60px;
+	
+	/* width: 60%; */
+}
+.inin{
+	width: 60%;
+}
+.passwordss{
+	margin-right: 2px;
+	
+}
+.passwordss input{
+	width: 50%;
+}
+
+
+
+#accordion{
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 35px;
+	margin-bottom: 100px;
+}
+#accordion ul{
+	list-style: none;
+}
+#accordion p{
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 35px;
+}
+
+#accordion li{
+	font-size: 30px;
+	margin-top: 10px;
+	margin-left: -30px;
+
+}
+#accordion li a {
+	font-size: 30px;
+	
+}
+#accordion li a:visited {
+	color: #1B6D85;
+	
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+	/* border: 1px solid #003eff; */
+	background: #286090;
+	font-weight: normal;
+	color: #ffffff;
+}
+
+
+
+.bottoms{
+	position: relative;
+	bottom: 0px;
+	color: white;
+	/* margin: 0 10%; */
+	line-height: 45px;
+	text-align: center;
+}
+.bottomu{
+	display: block;
+	border-bottom:1px white solid ;
+	height: 45px;
+	/* float: left; */
+	list-style: none;
+}
+.bottomu li{
+	float: left;
+	font-family: '楷体';
+	/* color: white; */
+	font-size: 35px;
+}
+.bottomu li a{
+	text-align: none;
+	font-family: '楷体';
+	color: white;
+	font-size: 30px;
+}

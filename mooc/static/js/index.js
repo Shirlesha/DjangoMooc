@@ -7,7 +7,7 @@ $(function() {
 	/*banner imgslide*/
     var unslider = $('.imgslide').unslider({
 		speed: 500,               //  The speed to animate each slide (in milliseconds)
-		delay: 5000,              //  The delay between slide animations (in milliseconds)
+		delay: 2000,              //  The delay between slide animations (in milliseconds)
 		complete: function() {},  //  A function that gets called after every slide animation
 		keys: true,               //  Enable keyboard (left, right) arrow shortcuts
 		dots: true,               //  Display dot navigation
@@ -32,7 +32,7 @@ $(function() {
 
     var unslider3 = $('.imgslide3').unslider({
 		speed: 500,              
-		delay: 3000,             
+		delay: 1000,
 		complete: function() {}, 
 		keys: true,               
 		dots: true,              
@@ -45,7 +45,7 @@ $(function() {
 
     var unslider4 = $('.imgslide4').unslider({
 		speed: 500,               
-		delay: 3000,             
+		delay: 1000,
 		complete: function() {}, 
 		keys: true,               
 		dots: true,             
@@ -58,7 +58,7 @@ $(function() {
 
     var unslider5 = $('.imgslide5').unslider({
 		speed: 500,              
-		delay: 3000,              
+		delay: 1000,
 		complete: function() {},  
 		keys: true,               
 		dots: false,               
@@ -69,33 +69,6 @@ $(function() {
         unslider5.data('unslider')[fn]();
     });
 
-	$('.sec_top_li').on('click', function(){
-		var _self = $(this),
-			type = _self.attr('data-type'),
-			$secTips = $('#secTips');
-		$('#jsWantType').val(type);
-		_self.siblings().removeClass('on');
-		_self.addClass('on');
-		$('.index_ico_arrow').css('left', 38 + 77*$(this).index()+'px');
-		$('#jsDemandForm > #name').focus();
-		switch (type){
-			case '1':
-				$secTips.html('快速获取课程资讯信息');
-				break;
-			case '2':
-				$secTips.html('提交教师信息，快速获取教师资讯');
-				break;
-		}
-	});
-
-    $('#jsDemandBtn').on('click', function(){
-        perfect_demand_form_submit({
-            jsPerfectSubmit: this,
-            jsPerfectForm: '#jsDemandForm',
-            jsPerfetTips:'#jsDemandTips',
-            isIndex: 'index'
-        });
-    });
 
 });
 

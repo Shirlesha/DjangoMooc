@@ -552,3 +552,21 @@ class IndexView(View):
             "banner_courses": banner_courses,
             "school_name": school_name,
         })
+
+
+# 关于我们
+class AboutUsView(View):
+    def get(self, request):
+        return render(request, "about_us.html", {})
+
+
+# 联系我们
+class ContactUsView(View):
+    def get(self, request):
+        return render(request, "contact_us.html", {})
+
+
+# 问题
+class QuestionsView(View):
+    def get(self, request):
+        return render(request, "questions.html", {})

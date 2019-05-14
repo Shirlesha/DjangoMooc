@@ -24,9 +24,9 @@ import xadmin
 from django.views.generic import TemplateView
 from users.views import user_login
 from mooc.settings import MEDIA_ROOT
-from schools.views import SchoolView
+from schools.views import SchoolView, LecturerCertificationView
 from users.views import LoginView, RegisterView, ActiveUserView, ForgetPwdView, ResetView, ModifyPwdView, LogoutView, \
-    IndexView
+    IndexView, ContactUsView, AboutUsView, QuestionsView
 
 
 urlpatterns = [
@@ -71,4 +71,17 @@ urlpatterns = [
 
     # 富文本相关url
     path('ueditor/', include('DjangoUeditor.urls')),
+
+    # 联系我们
+    path("/about_us/", ContactUsView.as_view(), name='about_us'),
+
+    # 关于我们
+    path("/about_us/", AboutUsView.as_view(), name='contact_us'),
+
+
+    # 问题
+    path("/questions/", QuestionsView.as_view(), name='questions'),
+
+    # 讲师认证
+    path("/lecturer_certification/", LecturerCertificationView.as_view(), name='lecturer_certification'),
 ]
